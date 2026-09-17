@@ -94,3 +94,10 @@ v novom okne.
 - presná kapacita vagóna a či sa objekty prenajímajú aj samostatne
 - či je bazén stále v prevádzke a v akej sezóne
 - súhlas fotografov s použitím fotiek
+
+## Nasadenie
+- **Repo:** https://github.com/majsteshifu/depo-loco-web (verejné, vetva `main`)
+- **Hosting:** Vercel, projekt prepojený s repom - každý push do `main` sa nasadí sám.
+  Statický web bez buildu, žiadny build command ani output directory netreba nastavovať.
+- `vercel.json` drží ročnú cache na `/img/*` a základné bezpečnostné hlavičky.
+- Úpravy: zmeň `index.html`, commitni, pushni - Vercel zvyšok dorobí.
