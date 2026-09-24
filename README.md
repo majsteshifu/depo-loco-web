@@ -11,16 +11,12 @@ so Zavolať / Booking. Nadpisy majú plynulú veľkosť cez `clamp()`, takže sa
 Otvor `index.html` v prehliadači.
 
 ## Fotky - dôležité upozornenie
-Skutočnú fotku vagóna (tiny house v tvare vagóna) sa mi nepodarilo nikde dohľadať -
-galéria na Archinfo aj ostatné portály ukazujú iba hlavnú tehlovú budovu (loft), žiadna
-z nich nezobrazuje samostatnú stavbu v tvare vagóna. Aby web nešíril mylnú fotku (ako
-predtým), karta Vagón má namiesto fotky jednoduchú ilustráciu vagóna s poznámkou
-"Ilustrácia - fotka čoskoro". Keď dodáte reálnu fotku, stačí ju uložiť ako `img/vagon.jpg`
-a v `index.html` v sekcii #ubytovanie nahradiť blok s `<svg>` naspäť za `<img src="img/vagon.jpg">`.
+`img/vagon.jpg` je teraz **reálna fotka** vagóna, ktorú poslal klient (orezaná na 16:10).
 
-`img/priroda.jpg` je orezaná fotka lesa (z galérie Archinfo, bez budovy) použitá ako
-nálada pre kartu Loco (jurta) - nie je to skutočné miesto budúcej jurty, len ilustračná
-atmosféra "príroda pri Španej Doline".
+`img/priroda.jpg` je stále len orezaná fotka lesa z galérie Archinfo (bez budovy), použitá
+ako nálada pre kartu Loco (jurta) - nie je to skutočné miesto budúcej jurty. **Čaká sa na
+skutočnú fotku jurty od klienta** - keď príde, stačí ju uložiť ako `img/priroda.jpg`
+(alebo zmeniť názov v `index.html`, sekcia #ubytovanie, karta "Loco").
 
 ## Farby objektov
 Každé ubytovanie má vlastnú farbu (pruh nad kartou, odznak, ikony, legenda nad kartami):

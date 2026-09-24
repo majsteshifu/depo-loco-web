@@ -60,16 +60,6 @@ tailwind.config = {
   /* prichod obsahu */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
   .reveal.in{opacity:1;transform:none}
-  /* ---- rozbita tehlova stena: torn okraj + kusy muriva ---- */
-  .torn-top{position:relative}
-  .torn-top::before{content:'';position:absolute;top:-1px;left:0;right:0;height:20px;z-index:1;
-    background:linear-gradient(165deg,#B85C38 0%,#A64A2B 45%,#7A3320 100%);
-    clip-path:polygon(0% 100%,4% 35%,9% 85%,14% 15%,19% 65%,24% 8%,30% 55%,36% 20%,42% 78%,
-      48% 12%,54% 60%,60% 28%,66% 82%,72% 18%,78% 58%,84% 10%,90% 72%,96% 22%,100% 100%);
-    pointer-events:none}
-  .brick-chunk{position:absolute;background:linear-gradient(135deg,#C77551,#7A3320 75%);
-    box-shadow:0 8px 18px -8px rgba(0,0,0,.5);pointer-events:none;border-radius:1px}
-
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
   /* fotky */
@@ -262,8 +252,6 @@ tailwind.config = {
 
 <!-- ================= FAKTY ================= -->
 <section class="relative bg-ink-900 text-bone-100">
-  <div class="brick-chunk hidden sm:block" style="width:46px;height:20px;left:8%;top:-10px;transform:rotate(-7deg)" aria-hidden="true"></div>
-  <div class="brick-chunk hidden sm:block" style="width:30px;height:16px;left:22%;top:-6px;transform:rotate(11deg)" aria-hidden="true"></div>
   <div class="mx-auto max-w-8xl px-6 sm:px-10 py-14 sm:py-20 grid grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
     <div class="reveal">
       <p class="font-display font-light text-[clamp(2.1rem,4vw,3.2rem)] text-bone-50 leading-none tracking-[-.04em]"><span class="num" data-to="1960" data-dec="0">0</span><span class="text-copper-400">.</span></p>
@@ -345,7 +333,7 @@ tailwind.config = {
 </section>
 
 <!-- ================= UBYTOVANIE ================= -->
-<section id="ubytovanie" class="torn-top relative py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-t-[2.5rem] sm:rounded-t-[4rem]">
+<section id="ubytovanie" class="py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-t-[2.5rem] sm:rounded-t-[4rem]">
   <div class="mx-auto max-w-8xl px-6 sm:px-10">
     <div class="reveal max-w-2xl">
       <p class="eyebrow text-copper-400 mb-6">Kde budete spať</p>
@@ -390,18 +378,9 @@ tailwind.config = {
 
       <article class="reveal card rounded-4xl bg-ink-800/60 ring-2 ring-bone-50/10 hover:ring-rail-500/60 overflow-hidden">
         <div class="h-1.5 bg-rail-600"></div>
-        <div class="shot aspect-[16/10] bg-rail-800 flex items-center justify-center relative">
-          <svg viewBox="0 0 200 100" class="w-3/4 max-w-[220px] text-rail-400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="14" y="28" width="172" height="46" rx="10" stroke="currentColor" stroke-width="3"/>
-            <rect x="26" y="38" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2.5"/>
-            <rect x="66" y="38" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2.5"/>
-            <rect x="106" y="38" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2.5"/>
-            <rect x="146" y="38" width="26" height="20" rx="2" stroke="currentColor" stroke-width="2.5"/>
-            <circle cx="46" cy="80" r="8" stroke="currentColor" stroke-width="3"/>
-            <circle cx="154" cy="80" r="8" stroke="currentColor" stroke-width="3"/>
-            <path d="M6 74h188M6 74l-4 4M194 74l4 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-          <span class="absolute right-4 bottom-4 rounded-full bg-ink-950/60 backdrop-blur text-rail-300 eyebrow text-[.55rem] px-3.5 py-1.5">Ilustrácia - fotka čoskoro</span>
+        <div class="shot zoom ph aspect-[16/10]">
+          <img src="img/vagon.jpg" alt="Vagón - tiny house pri Depe Loco" loading="lazy">
+          <div class="ph-label"><i class="fa-regular fa-image text-xl"></i><span>img/vagon.jpg</span></div>
         </div>
         <div class="p-7 sm:p-9">
           <div class="flex items-center justify-between gap-4">
@@ -485,7 +464,6 @@ tailwind.config = {
 
 <!-- ================= OKOLIE ================= -->
 <section id="okolie" class="relative py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-[2.5rem] sm:rounded-[4rem] mx-3 sm:mx-5">
-  <div class="brick-chunk hidden lg:block" style="width:38px;height:18px;right:11%;top:-9px;transform:rotate(9deg)" aria-hidden="true"></div>
   <div class="mx-auto max-w-8xl px-6 sm:px-10 grid lg:grid-cols-2 gap-14 lg:gap-20">
     <div class="reveal">
       <p class="eyebrow text-copper-400 mb-6">Okolie</p>
@@ -607,7 +585,7 @@ tailwind.config = {
 </section>
 
 <!-- ================= KONTAKT ================= -->
-<section id="kontakt" class="torn-top relative py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-t-[2.5rem] sm:rounded-t-[4rem]">
+<section id="kontakt" class="py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-t-[2.5rem] sm:rounded-t-[4rem]">
   <div class="mx-auto max-w-8xl px-6 sm:px-10">
     <div class="reveal max-w-3xl">
       <p class="eyebrow text-copper-400 mb-6">Rezervácia</p>
