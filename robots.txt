@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://depoloco.sk/sitemap.xml

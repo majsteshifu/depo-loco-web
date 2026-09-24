@@ -121,3 +121,28 @@ neexistujúcu stránku. Akonáhle je doména kúpená a nasmerovaná, over že Q
   Statický web bez buildu, žiadny build command ani output directory netreba nastavovať.
 - `vercel.json` drží ročnú cache na `/img/*` a základné bezpečnostné hlavičky.
 - Úpravy: zmeň `index.html`, commitni, pushni - Vercel zvyšok dorobí.
+
+
+## SEO
+- `<title>`, meta description (skrátený pod 160 znakov), `canonical` na https://depoloco.sk/
+- Open Graph + Twitter Card (absolútna URL na `img/hero.jpg`, rozmery obrázka)
+- Štruktúrované dáta `LodgingBusiness` (JSON-LD) - adresa, súradnice (približné, stred obce),
+  telefón, checkin/checkout, vybavenie, hodnotenie 5,0/17 z Airbnb (zhoduje sa s tým, čo je
+  viditeľné na stránke)
+- `favicon.ico` + PNG ikony + `apple-touch-icon.png` + `manifest.json` (vygenerované skriptom
+  nižšie, jednoduché monogram "D" v medenej na tmavom pozadí)
+- `robots.txt` a `sitemap.xml` (jedna URL - je to one-page web)
+- Všetky `<img>` majú popisný `alt`, dekoratívne obrázky (fotopás, lightbox) majú `alt=""` zámerne
+- Jeden `<h1>`, správna hierarchia `<h2>`/`<h3>`
+
+**Súradnice v JSON-LD** (48.8069, 19.1244) sú stred obce Špania Dolina, nie presná poloha
+objektu - dostatočné pre lokálne SEO, ale ak budeš chcieť presnejšie, over si GPS priamo
+pri dome (napr. z Google Maps pinu) a uprav `geo` v `index.html`.
+
+### Favicon - ako prerobiť
+```bash
+python3 - <<'EOF'
+from PIL import Image, ImageDraw, ImageFont
+# uprav farby/pismeno podla potreby, pozri povodny skript v histórii commitov
+EOF
+```
