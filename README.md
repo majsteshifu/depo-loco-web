@@ -172,3 +172,22 @@ Airbnb má 17 hodnotení, 5,0/5 - vybraných je 6 najlepšie vyznievajúcich a n
 Booking a Google Maps recenzie sa mi nepodarilo dohľadať (stránky blokujú automatizovaný
 prístup) - ak k nim máš prístup ako majiteľ (napr. cez Google Business Profile), pošli mi
 texty a pridám aj tie.
+
+
+## Galéria - doplnené fotky z Bookingu
+Web má naozaj málo vlastných fotiek, tak som skúsil dohľadať viac na verejných stránkach
+(Archinfo sa už minulo, Booking blokuje WebFetch ale nie prehliadač). Na Booking.com stránke
+Depo Loca je 49 fotiek v plnej galérii - stiahol som ich cez prehliadač (bstatic.com CDN
+odkazy majú podpísaný token, funguje len krátko po načítaní stránky).
+
+Pridané 4 nové (`g8.jpg` - `g11.jpg`), všetky bez viditeľných ľudí:
+- `g8.jpg` - výhľad z okna loftu na bazén a banícky vozík vonku (ukazuje skutočný bazén)
+- `g9.jpg` - detail pôvodnej kachľovej piecky
+- `g10.jpg` - interiér vagóna (vysoký strop, poschodová posteľ) - prvá reálna fotka interiéru vagóna na webe
+- `g11.jpg` - terasa za slnečného dňa (doteraz mal web len nočné/zimné zábery exteriéru)
+
+**Vedome vynechané** fotky s viditeľnými hosťami (skupina ľudí na terase, muž so psom pri ohni,
+deti pri hojdačke) - klient si to pri fotopáse nepriamo vyžiadal.
+
+Zvyšných ~44 fotiek z Bookingu je v `/tmp/booking-gallery` (dočasné, nie v git) - ak chceš
+doplniť ešte niečo iné, pozri si kontaktný hárok alebo pošli info čo hľadáš.
