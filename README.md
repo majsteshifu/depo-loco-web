@@ -155,3 +155,16 @@ from PIL import Image, ImageDraw, ImageFont
 # uprav farby/pismeno podla potreby, pozri povodny skript v histórii commitov
 EOF
 ```
+
+
+## Recenzie
+Nová sekcia `#recenzie` (medzi Okolie a fotopás, aj v navigácii) - 6 skutočných citácií
+z verejnej Airbnb stránky (airbnb.com/rooms/1044689773999709332), zdroj a dátum uvedený
+pri každej. Mená sú len krstné, presne tak, ako ich Airbnb sám zobrazuje verejne.
+Nič nie je vymyslené - ak treba pridať/vymeniť recenziu, over si text priamo na Airbnb
+(záložka Hodnotenia), aby sedel doslovne.
+
+Airbnb má 17 hodnotení, 5,0/5 - vybraných je 6 najlepšie vyznievajúcich a najrozmanitejších.
+Booking a Google Maps recenzie sa mi nepodarilo dohľadať (stránky blokujú automatizovaný
+prístup) - ak k nim máš prístup ako majiteľ (napr. cez Google Business Profile), pošli mi
+texty a pridám aj tie.
