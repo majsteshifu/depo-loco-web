@@ -11,8 +11,9 @@ so Zavolať / Booking. Nadpisy majú plynulú veľkosť cez `clamp()`, takže sa
 Otvor `index.html` v prehliadači.
 
 ## Fotky - dôležité upozornenie
-`img/vagon.jpg` je **reálna fotka** vagóna od klienta, orezaná na 16:10 tak, aby bola budova
-v strede záberu (pôvodný orez mal budovu na ľavej tretine, teraz vypĺňa väčšinu rámu).
+`img/vagon.jpg` je **reálna fotka** vagóna od klienta, oorezaná tesnejšie na fasádu (obe okná),
+aby budova vyplnala celý rám bez prázdneho neba v rohu - pôvodné dva orezy mali dom buď na
+ľavej tretine, alebo diagonálnu strechu s prázdnym nebom vpravo hore.
 
 `img/priroda.jpg` je stále len orezaná fotka lesa z galérie Archinfo (bez budovy), použitá
 ako nálada pre kartu Loco (jurta) - nie je to skutočné miesto budúcej jurty. Klient poslal
@@ -191,3 +192,10 @@ deti pri hojdačke) - klient si to pri fotopáse nepriamo vyžiadal.
 
 Zvyšných ~44 fotiek z Bookingu je v `/tmp/booking-gallery` (dočasné, nie v git) - ak chceš
 doplniť ešte niečo iné, pozri si kontaktný hárok alebo pošli info čo hľadáš.
+
+
+## Galéria - zarovnanie
+Mriežka `#gal` teraz používa jednotný `aspect-square` na všetkých 11 dlaždiciach (predtým
+mala g1 vysoký formát cez 2 riadky, g7/g11 široký cez 2 stĺpce, g10 orezaný na výšku -
+pôsobilo to rozhádzane). Teraz je to čistá mriežka 4 (desktop) / 3 (tablet) / 2 (mobil)
+rovnako veľkých štvorcov.
