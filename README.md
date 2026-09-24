@@ -108,15 +108,16 @@ v novom okne.
 - súhlas fotografov s použitím fotiek
 
 ## QR kód
-`img/qr.png` odkazuje na web. Vygeneroval ho `gen_qr.py`:
+`img/qr.png` odkazuje na `https://www.depoloco.sk`. Vygeneroval ho `gen_qr.py`:
 
 ```bash
-python3 gen_qr.py https://presna-adresa-webu.sk
+python3 gen_qr.py https://www.depoloco.sk
 ```
 
-**Momentálne obsahuje len placeholder adresu** (`https://depo-loco-web.vercel.app`) -
-akonáhle je jasná finálna doména (vlastná doména alebo potvrdená Vercel adresa),
-treba QR prekódovať skriptom vyššie, inak bude QR viesť na neplatný/dočasný odkaz.
+**Doména `depoloco.sk` ešte nie je kúpená** - QR aj tak odkazuje na ňu, pretože to tak
+chcel klient. Kým doména nebude aktívna (DNS smerujúci na Vercel), QR vedie na
+neexistujúcu stránku. Akonáhle je doména kúpená a nasmerovaná, over že QR funguje
+(naskenuj ho) - inak sa netreba k nemu vracať.
 
 ## Nasadenie
 - **Repo:** https://github.com/majsteshifu/depo-loco-web (verejné, vetva `main`)
