@@ -15,10 +15,8 @@ Otvor `index.html` v prehliadači.
 aby budova vyplnala celý rám bez prázdneho neba v rohu - pôvodné dva orezy mali dom buď na
 ľavej tretine, alebo diagonálnu strechu s prázdnym nebom vpravo hore.
 
-`img/priroda.jpg` je stále len orezaná fotka lesa z galérie Archinfo (bez budovy), použitá
-ako nálada pre kartu Loco (jurta) - nie je to skutočné miesto budúcej jurty. Klient poslal
-skutočnú fotku poľa (kde má jurta stáť), ale prišla bez prístupovej cesty na disk - treba
-ju poslať ešte raz, aby sa dala uložiť a nahradiť `img/priroda.jpg`.
+`img/priroda.jpg` je teraz **skutočná fotka poľa**, kde má jurta Loco stáť - poslal ju
+klient priamo (orezané na 16:10, pôvodne 4:3 s peknou kompozíciou neba/trávy, zachovanej).
 
 `img/pas.jpg` (dekoratívny pás medzi sekciami Okolie a Galéria) bol **odstránený aj so
 sekciou** - ukazoval hostí vo vnútri cez okno, čo nechcel klient zverejňovať.
