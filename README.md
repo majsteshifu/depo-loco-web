@@ -121,6 +121,15 @@ neexistujúcu stránku. Akonáhle je doména kúpená a nasmerovaná, over že Q
   Statický web bez buildu, žiadny build command ani output directory netreba nastavovať.
 - `vercel.json` drží ročnú cache na `/img/*` a základné bezpečnostné hlavičky.
 - Úpravy: zmeň `index.html`, commitni, pushni - Vercel zvyšok dorobí.
+- Doména: `depoloco.sk` + `www.depoloco.sk`, DNS na Websupporte smeruje na Vercel (A záznam 76.76.21.21).
+
+## Kontaktné čísla
+Na webe sú dve telefónne čísla, obe bez mena (majiteľka o to výslovne požiadala):
+- `+421 948 441 737` - primárne
+- `+421 904 226 821` - záložné ("Ak sa nedovoláte na prvé číslo")
+
+Oba sú v: hlavičke (len prvé), sekcii Kontakt (obe ako samostatné karty), JSON-LD
+(`contactPoint`) a vo fallback hláške formulára po prekročení limitu dopytov.
 
 
 ## SEO

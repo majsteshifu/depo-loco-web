@@ -50,6 +50,10 @@
   ],
   "telephone": "+421948441737",
   "priceRange": "Cena na dopyt",
+  "contactPoint": [
+    { "@type": "ContactPoint", "telephone": "+421948441737", "contactType": "reservations", "areaServed": "SK" },
+    { "@type": "ContactPoint", "telephone": "+421904226821", "contactType": "reservations", "areaServed": "SK" }
+  ],
   "petsAllowed": true,
   "checkinTime": "15:00",
   "checkoutTime": "10:00",
@@ -669,11 +673,16 @@ tailwind.config = {
       </h2>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-4 sm:gap-5 mt-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mt-14">
       <a href="tel:+421948441737" class="reveal card rounded-4xl bg-copper-500 text-ink-900 p-8 sm:p-9">
         <i class="fa-solid fa-phone text-xl"></i>
         <h3 class="mt-6 font-display font-medium text-xl tracking-[-.02em]">+421 948 441 737</h3>
-        <p class="mt-2 text-[.92rem] text-ink-900/70 font-normal">Priamo majiteľka. Voľné termíny aj cena na mieru.</p>
+        <p class="mt-2 text-[.92rem] text-ink-900/70 font-normal">Voľné termíny aj cena na mieru.</p>
+      </a>
+      <a href="tel:+421904226821" class="reveal card rounded-4xl bg-copper-500 text-ink-900 p-8 sm:p-9">
+        <i class="fa-solid fa-phone text-xl"></i>
+        <h3 class="mt-6 font-display font-medium text-xl tracking-[-.02em]">+421 904 226 821</h3>
+        <p class="mt-2 text-[.92rem] text-ink-900/70 font-normal">Ak sa nedovoláte na prvé číslo.</p>
       </a>
       <a href="https://www.airbnb.com/rooms/1044689773999709332" target="_blank" rel="noopener" class="reveal card rounded-4xl bg-ink-800/60 ring-2 ring-bone-50/10 hover:ring-copper-500/60 p-8 sm:p-9">
         <i class="fa-brands fa-airbnb text-copper-500 text-xl"></i>
@@ -1181,7 +1190,7 @@ if(tourPlay){
 
     /* 3. limit na pocet odoslani z jedneho prehliadaca */
     if(recent().length >= 3){
-      stav.textContent='Z tohto zariadenia už prišli tri dopyty. Zavolajte nám prosím na +421 948 441 737.';
+      stav.textContent='Z tohto zariadenia už prišli tri dopyty. Zavolajte nám prosím na +421 948 441 737 alebo +421 904 226 821.';
       stav.className='text-[.88rem] font-light text-copper-300';
       return;
     }
