@@ -908,19 +908,30 @@ tailwind.config = {
 
 
 <!-- ================= COOKIES ================= -->
-<div id="cookie" class="hide fixed z-[65] bottom-3 left-3 right-3 sm:left-5 sm:right-auto sm:bottom-5 sm:max-w-[26rem]">
-  <div class="rounded-4xl bg-ink-900/95 backdrop-blur-xl ring-1 ring-bone-50/12 shadow-[0_18px_60px_-18px_rgba(0,0,0,.7)] p-6 sm:p-7 text-bone-100">
-    <div class="flex items-center gap-3">
-      <span class="grid place-items-center w-9 h-9 rounded-full bg-copper-500/15 text-copper-400"><i class="fa-solid fa-cookie-bite text-[.85rem]"></i></span>
-      <h2 class="font-display font-medium text-[1.02rem] text-bone-50">Pár slov o cookies</h2>
-    </div>
-    <p class="mt-4 text-[.88rem] font-light leading-relaxed text-bone-100/65">
-      Nevyhnutné súbory držia web pokope a bežia vždy. Navyše si vieme zapnúť anonymnú
-      štatistiku návštevnosti a vloženú 360° prehliadku od externého poskytovateľa.
-      Rozhodnutie viete kedykoľvek zmeniť.
-    </p>
+<div id="cookie" class="hide fixed z-[65] inset-x-3 sm:inset-x-5 bottom-3 sm:bottom-5 mx-auto max-w-5xl">
+  <div class="rounded-4xl bg-ink-900/95 backdrop-blur-xl ring-1 ring-bone-50/12 shadow-[0_18px_60px_-18px_rgba(0,0,0,.7)] p-6 sm:p-8 text-bone-100">
+    <div class="lg:flex lg:items-center lg:justify-between lg:gap-10">
+      <div class="lg:max-w-xl">
+        <div class="flex items-center gap-3">
+          <span class="grid place-items-center w-9 h-9 rounded-full bg-copper-500/15 text-copper-400 shrink-0"><i class="fa-solid fa-cookie-bite text-[.85rem]"></i></span>
+          <h2 class="font-display font-medium text-[1.05rem] text-bone-50">Pár slov o cookies</h2>
+        </div>
+        <p class="mt-4 lg:mt-3 text-[.88rem] font-light leading-relaxed text-bone-100/65">
+          Nevyhnutné súbory držia web pokope a bežia vždy. Navyše si vieme zapnúť anonymnú
+          štatistiku návštevnosti a vloženú 360° prehliadku od externého poskytovateľa.
+          Rozhodnutie viete kedykoľvek zmeniť.
+        </p>
+      </div>
 
-    <div id="ckDetail" class="hidden mt-4 space-y-3 text-[.82rem] font-light text-bone-100/55">
+      <div class="mt-6 lg:mt-0 flex flex-wrap items-center gap-2.5 shrink-0">
+        <button id="ckAll" class="inline-flex items-center gap-2 rounded-full bg-copper-500 hover:bg-bone-50 text-ink-900 px-6 py-3 font-display text-[.85rem] font-medium transition-colors duration-500">Prijať všetko</button>
+        <button id="ckNec" class="inline-flex items-center rounded-full ring-1 ring-bone-50/25 hover:ring-bone-50/60 text-bone-50 px-6 py-3 font-display text-[.85rem] font-normal transition-all duration-500">Iba nevyhnutné</button>
+        <button id="ckMore" class="text-[.82rem] font-light text-bone-100/50 hover:text-copper-400 transition-colors ml-1">Nastaviť</button>
+        <button id="ckSave" class="hidden inline-flex items-center rounded-full ring-1 ring-copper-400/60 text-copper-300 px-6 py-3 font-display text-[.85rem] font-normal transition-all duration-500">Uložiť výber</button>
+      </div>
+    </div>
+
+    <div id="ckDetail" class="hidden mt-6 grid sm:grid-cols-3 gap-3 text-[.82rem] font-light text-bone-100/55">
       <div class="flex items-start justify-between gap-4 rounded-2xl bg-bone-50/5 p-3.5">
         <span><span class="text-bone-100/85 font-medium">Nevyhnutné</span><br>Zapamätanie tohto rozhodnutia. Bez nich to nejde.</span>
         <span class="eyebrow text-[.5rem] text-copper-400 shrink-0 mt-1">Vždy</span>
@@ -933,13 +944,6 @@ tailwind.config = {
         <span><span class="text-bone-100/85 font-medium">Vložený obsah</span><br>360° prehliadka z virtualneprehliadky.online.</span>
         <input type="checkbox" id="ckEmbed" class="mt-1 w-4 h-4 shrink-0 rounded accent-copper-500">
       </label>
-    </div>
-
-    <div class="mt-6 flex flex-wrap items-center gap-2.5">
-      <button id="ckAll" class="inline-flex items-center gap-2 rounded-full bg-copper-500 hover:bg-bone-50 text-ink-900 px-5 py-2.5 font-display text-[.85rem] font-medium transition-colors duration-500">Prijať všetko</button>
-      <button id="ckNec" class="inline-flex items-center rounded-full ring-1 ring-bone-50/25 hover:ring-bone-50/60 text-bone-50 px-5 py-2.5 font-display text-[.85rem] font-normal transition-all duration-500">Iba nevyhnutné</button>
-      <button id="ckMore" class="text-[.82rem] font-light text-bone-100/50 hover:text-copper-400 transition-colors ml-1">Nastaviť</button>
-      <button id="ckSave" class="hidden inline-flex items-center rounded-full ring-1 ring-copper-400/60 text-copper-300 px-5 py-2.5 font-display text-[.85rem] font-normal transition-all duration-500">Uložiť výber</button>
     </div>
   </div>
 </div>

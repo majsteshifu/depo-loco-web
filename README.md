@@ -11,9 +11,8 @@ so Zavolať / Booking. Nadpisy majú plynulú veľkosť cez `clamp()`, takže sa
 Otvor `index.html` v prehliadači.
 
 ## Fotky - dôležité upozornenie
-`img/vagon.jpg` je **reálna fotka** vagóna od klienta, oorezaná tesnejšie na fasádu (obe okná),
-aby budova vyplnala celý rám bez prázdneho neba v rohu - pôvodné dva orezy mali dom buď na
-ľavej tretine, alebo diagonálnu strechu s prázdnym nebom vpravo hore.
+`img/vagon.jpg` je teraz **iná, letná fotka** vagóna od klienta (nahradila zimný záber) -
+vidno celú stavbu vrátane schodov a podvozku, dvere aj okno vyvážene v zábere.
 
 `img/priroda.jpg` je teraz **skutočná fotka poľa**, kde má jurta Loco stáť - poslal ju
 klient priamo (orezané na 16:10, pôvodne 4:3 s peknou kompozíciou neba/trávy, zachovanej).
@@ -197,3 +196,9 @@ Mriežka `#gal` teraz používa jednotný `aspect-square` na všetkých 11 dlaž
 mala g1 vysoký formát cez 2 riadky, g7/g11 široký cez 2 stĺpce, g10 orezaný na výšku -
 pôsobilo to rozhádzane). Teraz je to čistá mriežka 4 (desktop) / 3 (tablet) / 2 (mobil)
 rovnako veľkých štvorcov.
+
+
+## Cookie lišta
+Predtým bola malá karta ukotvená vľavo dole (max-w-26rem) - klientovi to prekážalo.
+Teraz je to široký banner cez takmer celú šírku (max-w-5xl, vystredený), na veľkých
+obrazovkách text a tlačidlá vedľa seba namiesto pod sebou.
