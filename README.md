@@ -10,6 +10,18 @@ so Zavolať / Booking. Nadpisy majú plynulú veľkosť cez `clamp()`, takže sa
 ## Spustenie
 Otvor `index.html` v prehliadači.
 
+## Fotky - dôležité upozornenie
+Skutočnú fotku vagóna (tiny house v tvare vagóna) sa mi nepodarilo nikde dohľadať -
+galéria na Archinfo aj ostatné portály ukazujú iba hlavnú tehlovú budovu (loft), žiadna
+z nich nezobrazuje samostatnú stavbu v tvare vagóna. Aby web nešíril mylnú fotku (ako
+predtým), karta Vagón má namiesto fotky jednoduchú ilustráciu vagóna s poznámkou
+"Ilustrácia - fotka čoskoro". Keď dodáte reálnu fotku, stačí ju uložiť ako `img/vagon.jpg`
+a v `index.html` v sekcii #ubytovanie nahradiť blok s `<svg>` naspäť za `<img src="img/vagon.jpg">`.
+
+`img/priroda.jpg` je orezaná fotka lesa (z galérie Archinfo, bez budovy) použitá ako
+nálada pre kartu Loco (jurta) - nie je to skutočné miesto budúcej jurty, len ilustračná
+atmosféra "príroda pri Španej Doline".
+
 ## Farby objektov
 Každé ubytovanie má vlastnú farbu (pruh nad kartou, odznak, ikony, legenda nad kartami):
 
@@ -94,6 +106,17 @@ v novom okne.
 - presná kapacita vagóna a či sa objekty prenajímajú aj samostatne
 - či je bazén stále v prevádzke a v akej sezóne
 - súhlas fotografov s použitím fotiek
+
+## QR kód
+`img/qr.png` odkazuje na web. Vygeneroval ho `gen_qr.py`:
+
+```bash
+python3 gen_qr.py https://presna-adresa-webu.sk
+```
+
+**Momentálne obsahuje len placeholder adresu** (`https://depo-loco-web.vercel.app`) -
+akonáhle je jasná finálna doména (vlastná doména alebo potvrdená Vercel adresa),
+treba QR prekódovať skriptom vyššie, inak bude QR viesť na neplatný/dočasný odkaz.
 
 ## Nasadenie
 - **Repo:** https://github.com/majsteshifu/depo-loco-web (verejné, vetva `main`)

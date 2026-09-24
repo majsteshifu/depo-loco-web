@@ -60,6 +60,16 @@ tailwind.config = {
   /* prichod obsahu */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
   .reveal.in{opacity:1;transform:none}
+  /* ---- rozbita tehlova stena: torn okraj + kusy muriva ---- */
+  .torn-top{position:relative}
+  .torn-top::before{content:'';position:absolute;top:-1px;left:0;right:0;height:20px;z-index:1;
+    background:linear-gradient(165deg,#B85C38 0%,#A64A2B 45%,#7A3320 100%);
+    clip-path:polygon(0% 100%,4% 35%,9% 85%,14% 15%,19% 65%,24% 8%,30% 55%,36% 20%,42% 78%,
+      48% 12%,54% 60%,60% 28%,66% 82%,72% 18%,78% 58%,84% 10%,90% 72%,96% 22%,100% 100%);
+    pointer-events:none}
+  .brick-chunk{position:absolute;background:linear-gradient(135deg,#C77551,#7A3320 75%);
+    box-shadow:0 8px 18px -8px rgba(0,0,0,.5);pointer-events:none;border-radius:1px}
+
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
   /* fotky */
@@ -217,15 +227,15 @@ tailwind.config = {
     </div>
 
     <h1 class="reveal font-display font-light text-bone-50 h-tight text-[clamp(2.5rem,10.5vw,7.2rem)] max-w-5xl">
-      <span class="mask-line"><span>Spíte v depe.</span></span>
-      <span class="mask-line"><span class="text-copper-400 font-normal">Naozajstnom.</span></span>
+      <span class="mask-line"><span>Prespite v depe</span></span>
+      <span class="mask-line"><span class="text-copper-400 font-normal">- autentickom.</span></span>
     </h1>
 
     <div class="reveal mt-9 grid sm:grid-cols-[minmax(0,26rem)_auto] sm:items-end gap-8 sm:gap-14">
-      <p class="text-bone-100/80 text-[1.05rem] font-light leading-relaxed">
-        Servisná hala banských vagónikov a lokomotív zo šesťdesiatych rokov.
-        Tehlové murivo, oceľový nosník, tri a pol metra stropu - a les hneď za oknom.
-        Dnes loft, v ktorom sa dá prespať.
+      <p class="text-bone-100/85 text-[1.05rem] font-normal leading-relaxed">
+        Bývalá servisná hala pre banské vagóniky a lokomotívy, postavená v šesťdesiatych rokoch.
+        Tehla, oceľový nosník, strop vysoký tri a pol metra - a les hneď za oknom.
+        Dnes je z nej loft na prespanie.
       </p>
       <div class="flex flex-wrap items-center gap-3">
         <a href="#kontakt" class="arrow inline-flex items-center gap-2.5 rounded-full bg-copper-500 hover:bg-bone-50 text-ink-900 px-6 py-3.5 font-display text-[.92rem] font-medium transition-colors duration-500">
@@ -245,13 +255,15 @@ tailwind.config = {
   </a>
 
   <div class="hidden lg:flex absolute right-10 top-1/2 -translate-y-1/2 flex-col items-end gap-1.5 text-right">
-    <span class="font-display font-light text-6xl text-bone-50 leading-none tracking-[-.04em]">9,8</span>
-    <span class="eyebrow text-[.56rem] text-bone-100/55">Booking.com · 34 recenzií</span>
+    <span class="font-display font-light text-6xl text-bone-50 leading-none tracking-[-.04em]">5,0</span>
+    <span class="eyebrow text-[.56rem] text-bone-100/55">Airbnb · 17 recenzií</span>
   </div>
 </section>
 
 <!-- ================= FAKTY ================= -->
-<section class="bg-ink-900 text-bone-100">
+<section class="relative bg-ink-900 text-bone-100">
+  <div class="brick-chunk hidden sm:block" style="width:46px;height:20px;left:8%;top:-10px;transform:rotate(-7deg)" aria-hidden="true"></div>
+  <div class="brick-chunk hidden sm:block" style="width:30px;height:16px;left:22%;top:-6px;transform:rotate(11deg)" aria-hidden="true"></div>
   <div class="mx-auto max-w-8xl px-6 sm:px-10 py-14 sm:py-20 grid grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
     <div class="reveal">
       <p class="font-display font-light text-[clamp(2.1rem,4vw,3.2rem)] text-bone-50 leading-none tracking-[-.04em]"><span class="num" data-to="1960" data-dec="0">0</span><span class="text-copper-400">.</span></p>
@@ -281,22 +293,27 @@ tailwind.config = {
         Ťažil sa tu malachit. Meď.<br>A jazdili tadiaľto <span class="text-brick-700">hunty</span>.
       </h2>
       <div class="rail text-brick-600 my-9 max-w-[180px]"></div>
-      <div class="space-y-5 text-ink-600 font-light leading-[1.75] text-[1.06rem] max-w-xl">
+      <div class="space-y-5 text-ink-700 font-normal leading-[1.75] text-[1.06rem] max-w-xl">
         <p>
-          Do jednej z dvoch veľkých brán viedla úzka koľajnica. Po nej vchádzali malé banské
-          vagóniky - hunty - a lokomotívy do depa na servis. Zachovala sa servisná jama aj oceľový
-          nosník s vyznačenou maximálnou nosnosťou.
+          Cez jednu z dvoch veľkých brán viedla úzka koľajnica, po ktorej dovnútra vchádzali
+          banské vagóniky - hunty - aj lokomotívy na servis. Zachovala sa pôvodná servisná jama
+          aj oceľový nosník s vyznačenou maximálnou nosnosťou.
         </p>
         <p>
-          Chátrajúci objekt prešiel citlivou obnovou podľa návrhu architektky
-          <span class="font-medium text-ink-800">Elišky Turanskej</span>. Postupovala takmer ako pri pamiatke:
-          tehlové murivo z oboch strán len vyčistili a ošetrili, stavebné otvory zostali na svojom
-          mieste, nový nízky krov nezmenil výraz budovy.
+          Schátraný objekt prešiel obnovou podľa návrhu architektky
+          <span class="font-medium text-ink-800">Elišky Turanskej</span>, ktorá k nemu pristúpila takmer
+          ako k pamiatke: tehlové murivo z oboch strán iba vyčistili a ošetrili, pôvodné stavebné
+          otvory ostali na svojom mieste a nízky nový krov nenarušil výraz budovy.
         </p>
         <p>
-          Na dverách do kúpeľne sú vitráže <span class="font-medium text-ink-800">Kataríny Pokornej</span>
-          zachytávajúce šachtu Ludovika. Kuchynskú dosku tvoria recyklované betónové dlaždice
-          od Ľubomíra Horáka.
+          Do obnovy sa pustili s citom pre estetiku aj ekológiu - vitráž v okne od
+          <span class="font-medium text-ink-800">Kataríny Pokornej</span> aj vyradené banské náčinie
+          zostali súčasťou interiéru ako pripomienka pôvodného využitia. Kuchynskú dosku tvoria
+          recyklované betónové dlaždice od Ľubomíra Horáka.
+        </p>
+        <p>
+          Depo stojí uprostred lesa, no bez kompromisov: autom sa dá dôjsť priamo k nemu
+          a do centra Španej Doliny je to len kúsok pešo.
         </p>
       </div>
       <blockquote class="mt-10 rounded-4xl bg-ink-900 text-bone-100 p-8 sm:p-10 max-w-xl">
@@ -328,7 +345,7 @@ tailwind.config = {
 </section>
 
 <!-- ================= UBYTOVANIE ================= -->
-<section id="ubytovanie" class="py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-t-[2.5rem] sm:rounded-t-[4rem]">
+<section id="ubytovanie" class="torn-top relative py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-t-[2.5rem] sm:rounded-t-[4rem]">
   <div class="mx-auto max-w-8xl px-6 sm:px-10">
     <div class="reveal max-w-2xl">
       <p class="eyebrow text-copper-400 mb-6">Kde budete spať</p>
@@ -346,8 +363,8 @@ tailwind.config = {
     </div>
 
     <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-      <article class="reveal card rounded-4xl bg-ink-800/60 ring-1 ring-bone-50/8 hover:ring-copper-500/50 overflow-hidden">
-        <div class="h-1 bg-copper-500"></div>
+      <article class="reveal card rounded-4xl bg-ink-800/60 ring-2 ring-bone-50/10 hover:ring-copper-500/60 overflow-hidden">
+        <div class="h-1.5 bg-copper-500"></div>
         <div class="shot zoom ph aspect-[16/10]">
           <img src="img/loft.jpg" alt="Loft v baníckom depe" loading="lazy">
           <div class="ph-label"><i class="fa-regular fa-image text-xl"></i><span>img/loft.jpg</span></div>
@@ -358,9 +375,9 @@ tailwind.config = {
             <span class="rounded-full bg-copper-500/15 text-copper-300 eyebrow text-[.56rem] px-3 py-1.5">70 m²</span>
           </div>
           <p class="mt-4 text-bone-100/60 font-light leading-relaxed">
-            Otvorený priestor so stropom 3,6 m, spálňa, obývacia časť a kuchyňa pod nižším stropom.
-            Mobilný nábytok na kolieskach - priestor si prestaviate podľa seba. Veľké okná s nízkymi
-            parapetmi sú ideálne miesto na sedenie s výhľadom, kde neraz vidno pasúce sa srny.
+            Otvorený priestor pod stropom 3,6 m: spálňa, obývačka a kuchyňa v nižšej časti.
+            Nábytok je mobilný, na kolieskach, takže si priestor poľahky prestaviate podľa seba.
+            Veľké okná s nízkymi parapetmi lákajú na sedenie s výhľadom - a neraz aj s pasúcimi sa srnami.
           </p>
           <ul class="mt-7 grid grid-cols-2 gap-x-6 gap-y-3.5 text-[.92rem] text-bone-100/75 font-light">
             <li class="flex items-center gap-3"><i class="fa-solid fa-bed text-copper-500 w-4 text-[.8rem]"></i> spálňa + obývačka</li>
@@ -371,11 +388,20 @@ tailwind.config = {
         </div>
       </article>
 
-      <article class="reveal card rounded-4xl bg-ink-800/60 ring-1 ring-bone-50/8 hover:ring-rail-500/50 overflow-hidden">
-        <div class="h-1 bg-rail-600"></div>
-        <div class="shot zoom ph aspect-[16/10]">
-          <img src="img/vagon.jpg" alt="Tiny house v tvare vagóna" loading="lazy">
-          <div class="ph-label"><i class="fa-regular fa-image text-xl"></i><span>img/vagon.jpg</span></div>
+      <article class="reveal card rounded-4xl bg-ink-800/60 ring-2 ring-bone-50/10 hover:ring-rail-500/60 overflow-hidden">
+        <div class="h-1.5 bg-rail-600"></div>
+        <div class="shot aspect-[16/10] bg-rail-800 flex items-center justify-center relative">
+          <svg viewBox="0 0 200 100" class="w-3/4 max-w-[220px] text-rail-400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="14" y="28" width="172" height="46" rx="10" stroke="currentColor" stroke-width="3"/>
+            <rect x="26" y="38" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2.5"/>
+            <rect x="66" y="38" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2.5"/>
+            <rect x="106" y="38" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2.5"/>
+            <rect x="146" y="38" width="26" height="20" rx="2" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="46" cy="80" r="8" stroke="currentColor" stroke-width="3"/>
+            <circle cx="154" cy="80" r="8" stroke="currentColor" stroke-width="3"/>
+            <path d="M6 74h188M6 74l-4 4M194 74l4 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="absolute right-4 bottom-4 rounded-full bg-ink-950/60 backdrop-blur text-rail-300 eyebrow text-[.55rem] px-3.5 py-1.5">Ilustrácia - fotka čoskoro</span>
         </div>
         <div class="p-7 sm:p-9">
           <div class="flex items-center justify-between gap-4">
@@ -383,9 +409,9 @@ tailwind.config = {
             <span class="rounded-full bg-rail-500/20 text-rail-300 eyebrow text-[.56rem] px-3 py-1.5">Tiny house</span>
           </div>
           <p class="mt-4 text-bone-100/60 font-light leading-relaxed">
-            Malý domček postavený v tvare železničného vagóna - pre väčšie rodiny a partie,
-            ktorým samotný loft nestačí. Stojí pár krokov od depa, s vlastným vstupom
-            a súkromím.
+            Malá stavba v tvare železničného vagóna, pre väčšie rodiny a partie,
+            ktorým samotný loft nestačí. Stojí pár krokov od depa, má vlastný vstup
+            aj súkromie.
           </p>
           <ul class="mt-7 grid grid-cols-2 gap-x-6 gap-y-3.5 text-[.92rem] text-bone-100/75 font-light">
             <li class="flex items-center gap-3"><i class="fa-solid fa-bed text-rail-400 w-4 text-[.8rem]"></i> ďalšia spálňa</li>
@@ -396,16 +422,17 @@ tailwind.config = {
         </div>
       </article>
       <!-- ---- tretie miesto: pripravujeme ---- -->
-      <article class="reveal card rounded-4xl bg-ink-800/35 ring-1 ring-dashed ring-clay-500/30 hover:ring-clay-500/60 overflow-hidden">
-        <div class="h-1 bg-clay-500"></div>
-        <div class="shot ph aspect-[16/10]">
-          <img src="img/jurta.jpg" alt="Kruhová jurta - pripravujeme" loading="lazy">
-          <div class="ph-label"><i class="fa-solid fa-campground text-xl"></i><span>img/jurta.jpg</span></div>
+      <article class="reveal card rounded-4xl bg-ink-800/35 ring-2 ring-dashed ring-clay-500/35 hover:ring-clay-500/70 overflow-hidden">
+        <div class="h-1.5 bg-clay-500"></div>
+        <div class="shot ph aspect-[16/10] overflow-hidden">
+          <img src="img/priroda.jpg" alt="Príroda okolo Španej Doliny, kde vzniká jurta Loco" loading="lazy">
+          <div class="ph-label"><i class="fa-solid fa-campground text-xl"></i><span>img/priroda.jpg</span></div>
+          <div class="absolute -right-14 top-7 w-52 rotate-45 bg-clay-500 text-ink-900 text-center py-1.5 eyebrow text-[.6rem] shadow-[0_6px_16px_-4px_rgba(0,0,0,.5)]">Pripravujeme</div>
         </div>
         <div class="p-7 sm:p-9">
           <div class="flex items-center justify-between gap-4">
             <h3 class="font-display font-normal text-2xl text-bone-50 tracking-[-.02em]">Loco</h3>
-            <span class="rounded-full bg-clay-500/20 text-clay-300 eyebrow text-[.56rem] px-3 py-1.5">Pripravujeme</span>
+            <span class="rounded-full bg-clay-500/20 text-clay-300 eyebrow text-[.56rem] px-3 py-1.5">Kruhová jurta</span>
           </div>
           <p class="mt-4 text-bone-100/55 font-light leading-relaxed">
             Kruhová jurta na okraji poľa - niekde medzi indiánskym táborom a statkom.
@@ -444,28 +471,29 @@ tailwind.config = {
     </div>
 
     <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-      <div class="reveal card rounded-4xl bg-bone-50 ring-1 ring-ink-900/6 hover:ring-copper-500/40 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-fire-flame-curved"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Ohnisko a gril</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Vonkajšie ohnisko, gril a posedenie pod holým nebom.</p></div>
-      <div class="reveal card rounded-4xl bg-bone-50 ring-1 ring-ink-900/6 hover:ring-copper-500/40 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-water-ladder"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Sezónny bazén</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Vonkajší bazén v teplých mesiacoch, záhrada a slnečná terasa.</p></div>
-      <div class="reveal card rounded-4xl bg-bone-50 ring-1 ring-ink-900/6 hover:ring-copper-500/40 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-children"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Pre deti</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Šmykľavka, hojdačka, hračky aj spoločenské hry.</p></div>
-      <div class="reveal card rounded-4xl bg-bone-50 ring-1 ring-ink-900/6 hover:ring-copper-500/40 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-wifi"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Wi-Fi zadarmo</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Signál v celom objekte - ak ho teda budete chcieť.</p></div>
-      <div class="reveal card rounded-4xl bg-bone-50 ring-1 ring-ink-900/6 hover:ring-copper-500/40 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-kitchen-set"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Kuchyňa</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Umývačka, chladnička, riad - navarte si po svojom.</p></div>
-      <div class="reveal card rounded-4xl bg-bone-50 ring-1 ring-ink-900/6 hover:ring-copper-500/40 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-car"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Parkovanie</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Súkromné, bezplatné, pre 3 autá priamo pri objekte.</p></div>
-      <div class="reveal card rounded-4xl bg-bone-50 ring-1 ring-ink-900/6 hover:ring-copper-500/40 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-dog"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Psy vítané</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Za poplatok, po dohode vopred. Les majú hneď za rohom.</p></div>
-      <div class="reveal card rounded-4xl bg-bone-50 ring-1 ring-ink-900/6 hover:ring-copper-500/40 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-mountain-sun"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Výhľad do hôr</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Okraj obce, okraj lesa. Ticho a Starohorské vrchy.</p></div>
+      <div class="reveal card rounded-4xl bg-bone-50 ring-2 ring-brick-500/15 hover:ring-copper-500/60 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-fire-flame-curved"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Vonkajšie ohnisko a gril</h3><p class="mt-2 text-[.92rem] text-ink-500 font-normal leading-relaxed">Posedenie pod holým nebom, hneď vedľa dvora.</p></div>
+      <div class="reveal card rounded-4xl bg-bone-50 ring-2 ring-brick-500/15 hover:ring-copper-500/60 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-water-ladder"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Sezónny bazén</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Vonkajší bazén v teplých mesiacoch, záhrada a slnečná terasa.</p></div>
+      <div class="reveal card rounded-4xl bg-bone-50 ring-2 ring-brick-500/15 hover:ring-copper-500/60 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-children"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Pre deti</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Šmykľavka, hojdačka, hračky aj spoločenské hry.</p></div>
+      <div class="reveal card rounded-4xl bg-bone-50 ring-2 ring-brick-500/15 hover:ring-copper-500/60 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-wifi"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Wi-Fi</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Signál v celom objekte - ak ho teda budete chcieť.</p></div>
+      <div class="reveal card rounded-4xl bg-bone-50 ring-2 ring-brick-500/15 hover:ring-copper-500/60 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-kitchen-set"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Kuchyňa</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Umývačka, chladnička, riad - navarte si po svojom.</p></div>
+      <div class="reveal card rounded-4xl bg-bone-50 ring-2 ring-brick-500/15 hover:ring-copper-500/60 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-car"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Parkovanie</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Súkromné, bezplatné, pre 3 autá priamo pri objekte.</p></div>
+      <div class="reveal card rounded-4xl bg-bone-50 ring-2 ring-brick-500/15 hover:ring-copper-500/60 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-dog"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Psy vítané</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Za poplatok, po dohode vopred. Les majú hneď za rohom.</p></div>
+      <div class="reveal card rounded-4xl bg-bone-50 ring-2 ring-brick-500/15 hover:ring-copper-500/60 p-7"><span class="grid place-items-center w-11 h-11 rounded-full bg-copper-500/12 text-copper-600"><i class="fa-solid fa-mountain-sun"></i></span><h3 class="mt-5 font-display font-medium text-[1.05rem] text-ink-900">Výhľad do hôr</h3><p class="mt-2 text-[.92rem] text-ink-500 font-light leading-relaxed">Okraj obce, okraj lesa. Ticho a Starohorské vrchy.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ================= OKOLIE ================= -->
-<section id="okolie" class="py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-[2.5rem] sm:rounded-[4rem] mx-3 sm:mx-5">
+<section id="okolie" class="relative py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-[2.5rem] sm:rounded-[4rem] mx-3 sm:mx-5">
+  <div class="brick-chunk hidden lg:block" style="width:38px;height:18px;right:11%;top:-9px;transform:rotate(9deg)" aria-hidden="true"></div>
   <div class="mx-auto max-w-8xl px-6 sm:px-10 grid lg:grid-cols-2 gap-14 lg:gap-20">
     <div class="reveal">
       <p class="eyebrow text-copper-400 mb-6">Okolie</p>
       <h2 class="font-display font-light text-[clamp(2rem,6vw,3.75rem)] h-tight text-bone-50">Špania Dolina je<br>celá jedna pamiatka</h2>
       <p class="mt-7 text-bone-100/60 font-light leading-relaxed text-[1.05rem] max-w-lg">
         Banícka obec s klopačkou, kostolom Premenenia Pána, krytým dreveným schodiskom
-        a náučným chodníkom po starých šachtách. Odtiaľto sa dá vyraziť pešo aj na bicykli -
-        a večer sa vrátiť k ohnisku.
+        a náučným chodníkom popri starých šachtách. Vyraziť sa dá pešo aj na bicykli -
+        a večer sa vrátiť rovno k ohnisku.
       </p>
       <a href="https://maps.google.com/?q=Depo+Loco+%C5%A0pania+Dolina+231" target="_blank" rel="noopener"
          class="mt-9 inline-flex items-center gap-2.5 rounded-full ring-1 ring-bone-50/25 hover:ring-copper-400 hover:text-copper-400 text-bone-50 px-5 py-3 font-display text-[.9rem] font-normal transition-all duration-500">
@@ -559,11 +587,11 @@ tailwind.config = {
 <section id="info" class="aura py-28 sm:py-40">
   <div class="mx-auto max-w-8xl px-6 sm:px-10 grid lg:grid-cols-3 gap-12 lg:gap-16">
     <div class="reveal">
-      <p class="eyebrow text-brick-700 mb-6">Praktické info</p>
+      <p class="eyebrow text-brick-700 mb-6">Praktické info pred príchodom</p>
       <h2 class="font-display font-light text-[clamp(2rem,5vw,3rem)] text-ink-900 h-tight">Než prídete</h2>
       <p class="mt-7 text-ink-500 font-light leading-relaxed">
-        Cenu na vaše termíny radi pošleme - závisí od počtu hostí, dĺžky pobytu a sezóny.
-        Najrýchlejšie to ide telefonicky.
+        Presnú cenu na vaše termíny radi pošleme - závisí od počtu hostí, dĺžky pobytu a sezóny.
+        Najrýchlejšie sa dohodneme telefonicky.
       </p>
     </div>
     <dl class="reveal lg:col-span-2 grid sm:grid-cols-2 gap-x-12 gap-y-7 self-center">
@@ -579,7 +607,7 @@ tailwind.config = {
 </section>
 
 <!-- ================= KONTAKT ================= -->
-<section id="kontakt" class="py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-t-[2.5rem] sm:rounded-t-[4rem]">
+<section id="kontakt" class="torn-top relative py-28 sm:py-40 bg-ink-900 text-bone-100 rounded-t-[2.5rem] sm:rounded-t-[4rem]">
   <div class="mx-auto max-w-8xl px-6 sm:px-10">
     <div class="reveal max-w-3xl">
       <p class="eyebrow text-copper-400 mb-6">Rezervácia</p>
@@ -594,12 +622,12 @@ tailwind.config = {
         <h3 class="mt-6 font-display font-medium text-xl tracking-[-.02em]">+421 948 441 737</h3>
         <p class="mt-2 text-[.92rem] text-ink-900/70 font-normal">Priamo majiteľka. Voľné termíny aj cena na mieru.</p>
       </a>
-      <a href="https://www.booking.com/hotel/sk/depo-loco-banicke-depo.sk.html" target="_blank" rel="noopener" class="reveal card rounded-4xl bg-ink-800/60 ring-1 ring-bone-50/8 hover:ring-copper-500/40 p-8 sm:p-9">
-        <i class="fa-solid fa-calendar-check text-copper-500 text-xl"></i>
-        <h3 class="mt-6 font-display font-medium text-xl text-bone-50 tracking-[-.02em]">Booking.com</h3>
-        <p class="mt-2 text-[.92rem] text-bone-100/55 font-light">Online rezervácia s okamžitým potvrdením · hodnotenie 9,8.</p>
+      <a href="https://www.airbnb.com/rooms/1044689773999709332" target="_blank" rel="noopener" class="reveal card rounded-4xl bg-ink-800/60 ring-2 ring-bone-50/10 hover:ring-copper-500/60 p-8 sm:p-9">
+        <i class="fa-brands fa-airbnb text-copper-500 text-xl"></i>
+        <h3 class="mt-6 font-display font-medium text-xl text-bone-50 tracking-[-.02em]">Airbnb</h3>
+        <p class="mt-2 text-[.92rem] text-bone-100/55 font-light">Online rezervácia s okamžitým potvrdením · hodnotenie 5,0.</p>
       </a>
-      <a href="https://www.instagram.com/depo_loco" target="_blank" rel="noopener" class="reveal card rounded-4xl bg-ink-800/60 ring-1 ring-bone-50/8 hover:ring-copper-500/40 p-8 sm:p-9">
+      <a href="https://www.instagram.com/depo_loco" target="_blank" rel="noopener" class="reveal card rounded-4xl bg-ink-800/60 ring-2 ring-bone-50/10 hover:ring-copper-500/60 p-8 sm:p-9">
         <i class="fa-brands fa-instagram text-copper-500 text-xl"></i>
         <h3 class="mt-6 font-display font-medium text-xl text-bone-50 tracking-[-.02em]">@depo_loco</h3>
         <p class="mt-2 text-[.92rem] text-bone-100/55 font-light">Fotky, ročné obdobia a čo je práve nové.</p>
@@ -692,9 +720,24 @@ tailwind.config = {
       </div>
     </div>
 
-    <div class="reveal mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-[.92rem] font-light text-bone-100/55">
-      <span class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-copper-500"></i> Špania Dolina 231, 974 01 Špania Dolina</span>
-      <a href="https://maps.google.com/?q=Depo+Loco+%C5%A0pania+Dolina+231" target="_blank" rel="noopener" class="link-line text-copper-400">Navigovať</a>
+    <div class="reveal mt-6 rounded-4xl bg-ink-800/60 ring-1 ring-bone-50/10 p-7 sm:p-10 grid sm:grid-cols-[1fr_auto] gap-8 sm:gap-10 items-center">
+      <div>
+        <p class="eyebrow text-copper-400 mb-3">Kde nás nájdete</p>
+        <p class="font-display text-[1.4rem] sm:text-[1.7rem] font-normal text-bone-50 tracking-[-.01em] leading-snug">
+          Špania Dolina 231<br>974 01 Špania Dolina
+        </p>
+        <a href="https://maps.google.com/?q=Depo+Loco+%C5%A0pania+Dolina+231" target="_blank" rel="noopener"
+           class="arrow mt-6 inline-flex items-center gap-3 rounded-full bg-copper-500 hover:bg-bone-50 text-ink-900 px-6 py-3.5 font-display text-[.92rem] font-medium transition-colors duration-500">
+          <i class="fa-solid fa-location-dot text-[.85rem]"></i> Navigovať <i class="fa-solid fa-arrow-right text-[.75rem]"></i>
+        </a>
+      </div>
+      <div class="flex flex-col items-center gap-3 justify-self-center sm:justify-self-end">
+        <div class="shot ph bg-bone-50 rounded-3xl p-3 w-28 h-28 sm:w-32 sm:h-32">
+          <img src="img/qr.png" alt="QR kód s odkazom na web Depo Loco" width="128" height="128" loading="lazy" class="w-full h-full object-contain">
+          <div class="ph-label"><i class="fa-solid fa-qrcode text-xl"></i><span>img/qr.png</span></div>
+        </div>
+        <p class="text-[.72rem] text-bone-100/45 font-light text-center max-w-[9.5rem] leading-relaxed">Odfoťte a pošlite tento web ďalej</p>
+      </div>
     </div>
   </div>
 </section>
@@ -718,9 +761,9 @@ tailwind.config = {
     <a href="tel:+421948441737" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-copper-500 text-ink-900 py-3 font-display text-[.9rem] font-medium">
       <i class="fa-solid fa-phone text-[.8rem]"></i> Zavolať
     </a>
-    <a href="https://www.booking.com/hotel/sk/depo-loco-banicke-depo.sk.html" target="_blank" rel="noopener"
+    <a href="https://www.airbnb.com/rooms/1044689773999709332" target="_blank" rel="noopener"
        class="inline-flex items-center justify-center gap-2 rounded-full text-bone-50 px-5 py-3 font-display text-[.9rem] font-normal">
-      Booking
+      Airbnb
     </a>
   </div>
 </div>
