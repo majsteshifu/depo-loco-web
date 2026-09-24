@@ -11,12 +11,16 @@ so Zavolať / Booking. Nadpisy majú plynulú veľkosť cez `clamp()`, takže sa
 Otvor `index.html` v prehliadači.
 
 ## Fotky - dôležité upozornenie
-`img/vagon.jpg` je teraz **reálna fotka** vagóna, ktorú poslal klient (orezaná na 16:10).
+`img/vagon.jpg` je **reálna fotka** vagóna od klienta, orezaná na 16:10 tak, aby bola budova
+v strede záberu (pôvodný orez mal budovu na ľavej tretine, teraz vypĺňa väčšinu rámu).
 
 `img/priroda.jpg` je stále len orezaná fotka lesa z galérie Archinfo (bez budovy), použitá
-ako nálada pre kartu Loco (jurta) - nie je to skutočné miesto budúcej jurty. **Čaká sa na
-skutočnú fotku jurty od klienta** - keď príde, stačí ju uložiť ako `img/priroda.jpg`
-(alebo zmeniť názov v `index.html`, sekcia #ubytovanie, karta "Loco").
+ako nálada pre kartu Loco (jurta) - nie je to skutočné miesto budúcej jurty. Klient poslal
+skutočnú fotku poľa (kde má jurta stáť), ale prišla bez prístupovej cesty na disk - treba
+ju poslať ešte raz, aby sa dala uložiť a nahradiť `img/priroda.jpg`.
+
+`img/pas.jpg` (dekoratívny pás medzi sekciami Okolie a Galéria) bol **odstránený aj so
+sekciou** - ukazoval hostí vo vnútri cez okno, čo nechcel klient zverejňovať.
 
 ## Farby objektov
 Každé ubytovanie má vlastnú farbu (pruh nad kartou, odznak, ikony, legenda nad kartami):
